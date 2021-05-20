@@ -1,2 +1,2 @@
-# coding-coutin
+# Coding routine
 Python &amp; Go
