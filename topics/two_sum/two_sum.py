@@ -10,7 +10,6 @@ class Solution(object):
         ([3, 3], 6, [0, 1])
     ]
 
-    @staticmethod
     def two_sum(self, nums: List[int], target: int) -> List[int]:
         """
         Args:
