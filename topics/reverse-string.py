@@ -7,18 +7,23 @@ class Solution:
         (['H', 'a', 'n', 'n', 'a', 'h'], ['h', 'a', 'n', 'n', 'a', 'H']),
     ]
 
-    def reverseString(self, input_list: list) -> list:
-        if not input_list or not isinstance(input_list, list):
+    def reverseString(self, s: list) -> list:
+        if not s or not isinstance(s, list):
             return []
 
-        result = []
-        right_i = len(input_list) - 1
+        left_i, right_i = 0, len(s) - 1
 
-        while right_i >= 0:
-            result.append(input_list[right_i])
+        while left_i < right_i:
+            left_symbol = s[left_i]
+            right_symbol = s[right_i]
+
+            s[left_i] = right_symbol
+            s[right_i] = left_symbol
+
+            left_i += 1
             right_i -= 1
 
-        return result
+        return s
 
 
 @pytest.mark.parametrize('input_list, expected', Solution.parameters)
