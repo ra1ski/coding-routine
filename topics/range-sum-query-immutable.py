@@ -21,6 +21,10 @@ class NumArray:
 
         return self.nums[right] - self.nums[left - 1]
 
+    # To check MVP
+    def sumRangeTheEasiestWay(self, left: int, right: int) -> int:
+        return sum(self.nums[left:right + 1])
+
     @staticmethod
     def get_prefix_sum_accumulated(nums):
         return list(accumulate(nums))
