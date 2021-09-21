@@ -133,3 +133,5 @@ dmypy.json
 # Go
 .mod
 .sum
+
+.txt
