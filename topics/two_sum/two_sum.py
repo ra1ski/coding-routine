@@ -26,6 +26,7 @@ class Solution(object):
                 nums_hash[num] = i
             else:
                 result = [nums_hash[subtraction], i]
+                break
 
         return result
 
