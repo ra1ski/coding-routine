@@ -16,19 +16,12 @@ class Solution(object):
             nums List[int]:
             target int:
         """
-        nums_hash = {}
-        result = [0, 0]
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
 
-        for i, num in enumerate(nums):
-            subtraction = target - num
-
-            if subtraction not in nums_hash:
-                nums_hash[num] = i
-            else:
-                result = [nums_hash[subtraction], i]
-                break
-
-        return result
+        # return result
 
 
 @pytest.mark.parametrize("nums, target, expected", Solution.parameters)
