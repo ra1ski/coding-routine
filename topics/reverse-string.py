@@ -14,11 +14,7 @@ class Solution:
         left_i, right_i = 0, len(s) - 1
 
         while left_i < right_i:
-            left_symbol = s[left_i]
-            right_symbol = s[right_i]
-
-            s[left_i] = right_symbol
-            s[right_i] = left_symbol
+            s[left_i], s[right_i] = s[right_i], s[left_i]
 
             left_i += 1
             right_i -= 1
