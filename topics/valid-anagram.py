@@ -24,6 +24,16 @@ class Solution:
     def isAnagram3(self, s: str, t: str) -> bool:
         return collections.Counter(s) == collections.Counter(t)
 
+    def isAnagram4(self, s: str, t: str) -> bool:
+        s = sorted(s)
+        t = sorted(t)
+
+        for i in range(len(s)):
+            if s[i] != t[i]:
+                return False
+
+        return True
+
 
 @pytest.mark.parametrize('word1, word2, expected', Solution.parameters)
 def test_is_anagram(word1: str, word2: str, expected: bool):
@@ -44,3 +54,9 @@ def test_is_anagram3(word1: str, word2: str, expected: bool):
     solution = Solution()
 
     assert expected == solution.isAnagram3(word1, word2)
+
+@pytest.mark.parametrize('word1, word2, expected', Solution.parameters)
+def test_is_anagram4(word1: str, word2: str, expected: bool):
+    solution = Solution()
+
+    assert expected == solution.isAnagram4(word1, word2)
