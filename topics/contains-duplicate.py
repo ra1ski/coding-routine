@@ -33,6 +33,19 @@ class Solution:
         return len(nums) != len(c.keys())
 
 
+    def containsDuplicate4(self, nums: List[int]) -> bool:
+        nums.sort()
+        hash_nums = {}
+
+        for i in nums:
+            if i in hash_nums:
+                return True
+
+            hash_nums[i] = 1
+
+        return False
+
+
 @pytest.mark.parametrize('nums, expected', Solution.parameters)
 def test_contains_duplicate(nums: List, expected: bool):
     s = Solution()
@@ -52,3 +65,10 @@ def test_contains_duplicate3(nums: List, expected: bool):
     s = Solution()
 
     assert expected == s.containsDuplicate3(nums)
+
+
+@pytest.mark.parametrize('nums, expected', Solution.parameters)
+def test_contains_duplicate4(nums: List, expected: bool):
+    s = Solution()
+
+    assert expected == s.containsDuplicate4(nums)
