@@ -17,3 +17,23 @@ class Solution:
             slow = slow.next
 
         return slow
+
+#     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+#         if not head:
+#             return head
+
+#         current, middle = head, head
+#         i = 1
+
+#         while current and current.next:
+#             current = current.next
+
+#             if i % 2 == 0:
+#                 middle = middle.next
+
+#             i += 1
+
+#         if i % 2 == 0:
+#             return middle.next
+
+#         return middle
