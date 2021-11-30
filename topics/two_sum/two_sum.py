@@ -16,17 +16,14 @@ class Solution(object):
             nums List[int]:
             target int:
         """
-        nums_hash = {}
-        result = [0, 0]
-
-        for i, num in enumerate(nums):
-            subtraction = target - num
-
-            if subtraction not in nums_hash:
-                nums_hash[num] = i
-            else:
-                result = [nums_hash[subtraction], i]
-                break
+        n = len(nums)
+        result = []
+        for i in range(n):
+            sum = 0
+            sum = nums[i] + nums[i - 1]
+            if sum == target:
+                result.append(i - 1)
+                result.append(i)
 
         return result
 
@@ -35,4 +32,4 @@ class Solution(object):
 def test_two_sum(nums, target, expected):
     solution = Solution()
 
-    assert expected == solution.two_sum(nums, target)
+    assert  solution.two_sum(nums, target) == expected
