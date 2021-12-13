@@ -15,7 +15,6 @@ class Solution:
 
         while l < r:
             n_sum = numbers[l] + numbers[r]
-
             if n_sum == target:
                 return [l + 1, r + 1]
 
