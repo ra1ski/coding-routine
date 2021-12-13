@@ -9,7 +9,7 @@ class Solution:
         ([0], [0])
     ]
 
-    def sortArrayByParity(self, nums: List[int]) -> List[int]:
+    def replace-elements-with-greatest-element-on-right-side(self, nums: List[int]) -> List[int]:
         nums.sort(key=lambda x: x % 2)
         # nums = [i for i in nums if i % 2 == 0] + [i for i in nums if i % 2 == 1]
 
