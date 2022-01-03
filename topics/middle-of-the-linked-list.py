@@ -37,3 +37,9 @@ class Solution:
 #             return middle.next
 
 #         return middle
+
+    def middleNode3(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        arr = [head]
+        while arr[-1].next:
+            arr.append(arr[-1].next)
+        return arr[len(arr) // 2]
