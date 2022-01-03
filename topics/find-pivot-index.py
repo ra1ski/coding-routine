@@ -17,6 +17,7 @@ class Solution:
 
         for i, x in enumerate(nums):
             rightsum = (S - leftsum - x)
+
             if leftsum == rightsum:
                 return i
             leftsum += x
