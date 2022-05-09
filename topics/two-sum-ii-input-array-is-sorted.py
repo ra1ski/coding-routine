@@ -11,17 +11,21 @@ class Solution:
     ]
 
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        l, r = 0, len(numbers) - 1
+        if not numbers:
+            return []
 
-        while l < r:
-            n_sum = numbers[l] + numbers[r]
-            if n_sum == target:
-                return [l + 1, r + 1]
+        left, right = 0, len(numbers) - 1
 
-            if n_sum < target:
-                l += 1
+        while left <= right:
+            target_sum = numbers[left] + numbers[right]
+
+            if target_sum == target:
+                return [left + 1, right + 1]
             else:
-                r -= 1
+                if target_sum > target:
+                    right -= 1
+                else:
+                    left += 1
 
 
 @pytest.mark.parametrize('numbers, target, expected', Solution.params)
