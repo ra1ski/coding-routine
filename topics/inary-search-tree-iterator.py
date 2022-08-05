@@ -20,7 +20,7 @@ class BSTIterator:
         self.flatten_bst(root.right)
 
     def next(self) -> int:
-        self.index = + 1
+        self.index += 1
         return self.flattened_bst[self.index]
 
     def hasNext(self) -> bool:
