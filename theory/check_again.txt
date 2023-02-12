@@ -1,0 +1,49 @@
+-- After recusion check binary trees again --
+
+Medium
+
+with heap
+https://leetcode.com/problems/kth-largest-element-in-an-array/
+
+dequee
+https://leetcode.com/problems/reverse-words-in-a-string
+
+Easy
+
+https://leetcode.com/problems/valid-parentheses/
+https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array
+
+Linked list
++ https://leetcode.com/problems/delete-node-in-a-linked-list/
+https://leetcode.com/problems/reverse-linked-list/submissions/
+https://leetcode.com/problems/merge-two-sorted-lists/
+https://leetcode.com/problems/partition-list/
+https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+
+Binary search
+https://leetcode.com/problems/sqrtx/
+
+Arrays
+https://leetcode.com/problems/merge-sorted-array/
+
+Two pointers
+https://leetcode.com/problems/squares-of-a-sorted-array/
+
+https://leetcode.com/explore/learn/card/fun-with-arrays/523/conclusion/3230/
+
+Trees
+https://leetcode.com/problems/binary-tree-inorder-traversal/solution/
+https://leetcode.com/problems/binary-tree-level-order-traversal/submissions/
+
+Arrays n strings
+https://leetcode.com/problems/reverse-words-in-a-string/solution/
+
+
+Выучи формулу
+https://leetcode.com/explore/learn/card/linked-list/213/conclusion/1295/
+
+Recusion
+https://leetcode.com/problems/maximum-depth-of-binary-tree
+
+Queue
+https://leetcode.com/problems/walls-and-gates/ (https://leetcode.com/problems/walls-and-gates/discuss/387339/Python-BFS-and-DFS)
