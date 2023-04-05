@@ -82,7 +82,6 @@ else:
     with f:
         print(f.read())
 
-
 # No race condition
 try:
     with open(file_name) as f:

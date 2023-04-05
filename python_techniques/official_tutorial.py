@@ -214,3 +214,4 @@ for cls in [B, C, D]:
         print("C")
     except B:
         print("B")
+

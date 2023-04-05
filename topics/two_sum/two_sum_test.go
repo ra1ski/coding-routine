@@ -1,3 +1,5 @@
+package main
+
 import(
     "testing"
     "github.com/stretchr/testify/assert"
@@ -22,21 +24,47 @@ func TestTwoSum(t *testing.T) {
     }
 }
 
+func TestTwoSum2(t *testing.T) {
+    for _, parameters := range test_parameters {
+        result := twoSum2(parameters.nums, parameters.target)
+
+        assert.Equal(t, result, parameters.expected, "Two slices should be equal")
+    }
+}
+
+
 func twoSum(nums []int, target int) []int {
-    numsHash := make(map[int]int)
+    hashmap := make(map[int]int)
     result := []int{0, 0}
 
     for i, value := range nums {
-        subtraction := target - value
+        diff := target - value
 
-        _, ok := numsHash[subtraction]
+        _, ok := hashmap[diff]
 
         if ok {
-            result[0] = numsHash[subtraction]
-            result[1] = i            
-            
+            result[0] = hashmap[diff]
+            result[1] = i
         } else {
-            numsHash[value] = i
+            hashmap[value] = i
+        }
+    }
+
+    return result
+}
+
+func twoSum2(nums []int, target int) []int {
+    hashmap := make(map[int]int)
+    result := []int{0, 0}
+
+    for i, value := range nums {
+        diff := target - value
+
+        if _, ok := hashmap[diff]; ok {
+            result[0] = hashmap[diff]
+            result[1] = i
+        } else {
+            hashmap[value] = i
         }
     }
 

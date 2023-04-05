@@ -1,3 +1,10 @@
+## Lists ##
+- a["a","b","c","d","e","f"]
+- a[:3] - from zero until 3 (without three)
+- a[2:] - from two till the end
+- a[1:5] - from one until 5
+- a[3:4] - third element.
+
 ## Trees ##
 
 DFS - use stack

@@ -38,6 +38,7 @@ def get_digit(x: int):
 result = get_digit(5)
 print(result)
 
+
 class Power(object):
     def __init__(self, func):
         self._func = func

@@ -16,10 +16,11 @@ class Solution:
         avg = nums_sum / k
 
         for i in range(k, len(nums)):
-            nums_sum = nums_sum + nums[i] - nums[i-k]
-            avg = max(avg, nums_sum/k)
+            nums_sum = nums_sum + nums[i] - nums[i - k]
+            avg = max(avg, nums_sum / k)
 
         return avg
+
 
 @pytest.mark.parametrize("nums, k, expected", Solution.params)
 def test_solution(nums, k, expected):
